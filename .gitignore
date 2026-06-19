@@ -1,0 +1,41 @@
+# Browser cache directories
+_*/
+ade.googlesyndication.com/
+api.ouedkniss.com/
+cdn.ouedkniss.com/
+cdn7.ouedkniss.com/
+cdn8.ouedkniss.com/
+cdn9.ouedkniss.com/
+cm.g.doubleclick.net/
+connect.facebook.net/
+dclk-match.dotomi.com/
+dsp.adkernel.com/
+ep1.adtrafficquality.google/
+ep2.adtrafficquality.google/
+googleads.g.doubleclick.net/
+gtracenep.admaster.cc/
+match.prod.bidr.io/
+pagead2.googlesyndication.com/
+s0.2mdn.net/
+securepubads.g.doubleclick.net/
+sync.ipredictive.com/
+sync.srv.stackadapt.com/
+sync.teads.tv/
+tpc.googlesyndication.com/
+us-u.openx.net/
+www.google.com/
+www.googleadservices.com/
+www.googletagmanager.com/
+www.ouedkniss.com/
+www.temu.com/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
