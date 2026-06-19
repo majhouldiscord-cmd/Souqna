@@ -76,116 +76,195 @@ header{
     box-shadow:0 8px 25px #0001;
 }
 
-.hero-main{
+.hero-slider{
+    display:flex;
+    background:linear-gradient(90deg,#082f49,#06233c);
     color:white;
+}
+
+.property-slider-container{
     position:relative;
+    flex:3;
+    display:flex;
+    align-items:center;
+    padding:10px;
     overflow:hidden;
 }
 
-.slider-container{
-    height:100%;
-    width:100%;
-    position:relative;
-}
-
-.slider-wrapper{
+.property-track{
     display:flex;
-    transition:transform 0.5s ease-in-out;
-    height:100%;
+    gap:12px;
+    transition:transform 0.4s ease;
 }
 
-.slide{
-    min-width:100%;
-    height:100%;
+.property-card{
     position:relative;
-    display:none;
+    min-width:220px;
+    height:260px;
+    border-radius:16px;
+    overflow:hidden;
+    opacity:0.6;
+    transition:all 0.3s ease;
 }
 
-.slide.active{
-    display:flex;
+.property-card.active{
+    opacity:1;
+    border:3px solid #1a73e8;
+    transform:scale(1.05);
 }
 
-.slide img{
+.property-card img{
     width:100%;
     height:100%;
     object-fit:cover;
 }
 
-.slide-text{
+.property-tag-top{
     position:absolute;
-    top:50%;
-    right:35px;
-    transform:translateY(-50%);
-    background:linear-gradient(90deg,#082f49,#06233c);
-    padding:35px;
-    border-radius:24px;
-    text-align:right;
-}
-
-.slide-text h1{
-    font-size:40px;
-}
-
-.slide-text button{
-    margin-top:25px;
-    padding:15px 30px;
-    border-radius:30px;
-    border:0;
-    background:#ffb000;
+    top:12px;
+    left:12px;
+    background:#1a73e8;
     color:white;
-    cursor:pointer;
+    padding:6px 12px;
+    border-radius:12px;
+    font-size:12px;
+    font-weight:600;
 }
 
-.slider-btn{
+.property-tag-bottom{
+    position:absolute;
+    bottom:12px;
+    left:12px;
+    background:rgba(0,0,0,0.7);
+    color:white;
+    padding:6px 12px;
+    border-radius:12px;
+    font-size:12px;
+    font-weight:600;
+}
+
+.nav-btn{
     position:absolute;
     top:50%;
     transform:translateY(-50%);
-    background:rgba(255,255,255,0.9);
+    background:white;
     border:none;
-    width:48px;
-    height:48px;
+    width:40px;
+    height:40px;
     border-radius:50%;
     cursor:pointer;
     display:flex;
     align-items:center;
     justify-content:center;
-    box-shadow:0 2px 10px rgba(0,0,0,0.2);
-    z-index:10;
+    box-shadow:0 2px 8px rgba(0,0,0,0.2);
+    z-index:20;
 }
 
-.slider-btn:hover{
-    background:white;
-}
-
-.slider-btn.prev{
+.nav-left{
     left:15px;
 }
 
-.slider-btn.next{
+.nav-right{
     right:15px;
 }
 
-.slide-dots{
-    position:absolute;
-    bottom:20px;
-    left:50%;
-    transform:translateX(-50%);
+.hero-info{
+    flex:2;
+    padding:30px;
     display:flex;
-    gap:10px;
-    z-index:10;
+    flex-direction:column;
+    justify-content:center;
+    text-align:right;
 }
 
-.dot{
-    width:12px;
-    height:12px;
-    border-radius:50%;
-    background:rgba(255,255,255,0.5);
+.hero-info h2{
+    font-size:16px;
+    letter-spacing:4px;
+    opacity:0.9;
+    margin:0;
+}
+
+.hero-info h1{
+    font-size:42px;
+    margin:5px 0 15px 0;
+}
+
+.hero-info p{
+    margin:8px 0;
+    font-size:14px;
+}
+
+.call-btn{
+    margin-top:20px;
+    padding:12px 28px;
+    border-radius:30px;
+    border:2px solid white;
+    background:transparent;
+    color:white;
+    font-size:16px;
     cursor:pointer;
-    transition:background 0.3s;
+    width:fit-content;
+    align-self:flex-end;
 }
 
-.dot.active{
+.call-btn:hover{
     background:white;
+    color:#082f49;
+}
+
+.side-content{
+    position:relative;
+    height:100%;
+    display:flex;
+}
+
+.side-content img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.side-text{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:linear-gradient(180deg,rgba(0,0,0,0.3),rgba(0,0,0,0.7));
+    padding:30px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.side-text p{
+    margin:8px 0;
+    font-size:20px;
+}
+
+.ouedkniss-logo{
+    margin:15px 0;
+}
+
+.ouedkniss-logo span:first-child{
+    font-size:14px;
+    opacity:0.8;
+}
+
+.start-btn{
+    margin-top:20px;
+    padding:10px 24px;
+    border-radius:20px;
+    border:none;
+    background:#1a73e8;
+    color:white;
+    font-size:14px;
+    cursor:pointer;
+    width:fit-content;
+}
+
+.start-btn:hover{
+    background:#1557b0;
 }
 
 .side{
@@ -296,45 +375,65 @@ Rechercher sur Ouedkniss <span class="material-icons">search</span>
 
 <section class="hero">
 
-<div class="card hero-main">
-<div class="slider-container">
-<div class="slider-wrapper" id="sliderWrapper">
-<div class="slide active">
-<img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800" alt="Résidence AGHILES">
-<div class="slide-text">
-<h1>Résidence AGHILES</h1>
-<p>Promotion immobilière</p>
-<button><span class="material-icons" style="vertical-align:middle;">call</span> +213 (0) 770 99 41 09</button>
+<div class="card hero-slider">
+<div class="property-slider-container">
+<button class="nav-btn nav-left" id="prevBtn"><span class="material-icons">chevron_left</span></button>
+<div class="property-track" id="propertyTrack">
+<div class="property-card active">
+<div class="property-tag-top">Résidence AGHILES</div>
+<img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400" alt="Résidence AGHILES">
+<div class="property-tag-bottom">Résidence Hai El Biar</div>
+</div>
+<div class="property-card">
+<div class="property-tag-top">Résidence Les Bois</div>
+<img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=400" alt="Résidence Les Bois">
+<div class="property-tag-bottom">Résidence Les Bois</div>
+</div>
+<div class="property-card">
+<div class="property-tag-top">Résidence Dely 2</div>
+<img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=400" alt="Résidence Dely 2">
+<div class="property-tag-bottom">Résidence Dely 2</div>
+</div>
+<div class="property-card">
+<div class="property-tag-top">Villa Moderne</div>
+<img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400" alt="Villa Moderne">
+<div class="property-tag-bottom">Villa à Alger</div>
+</div>
+<div class="property-card">
+<div class="property-tag-top">Appartement Luxe</div>
+<img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=400" alt="Appartement Luxe">
+<div class="property-tag-bottom">Appartement à Hydra</div>
 </div>
 </div>
-<div class="slide">
-<img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800" alt="Résidence Les Bois">
-<div class="slide-text">
-<h1>Résidence Les Bois</h1>
-<p>Villa moderne avec jardin</p>
-<button><span class="material-icons" style="vertical-align:middle;">call</span> +213 (0) 555 12 34 56</button>
+<button class="nav-btn nav-right" id="nextBtn"><span class="material-icons">chevron_right</span></button>
 </div>
-</div>
-<div class="slide">
-<img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800" alt="Résidence Dely 2">
-<div class="slide-text">
-<h1>Résidence Dely 2</h1>
-<p>Appartements luxueux</p>
-<button><span class="material-icons" style="vertical-align:middle;">call</span> +213 (0) 661 78 90 12</button>
-</div>
-</div>
-</div>
-<button class="slider-btn prev" id="prevBtn"><span class="material-icons">chevron_left</span></button>
-<button class="slider-btn next" id="nextBtn"><span class="material-icons">chevron_right</span></button>
-<div class="slide-dots" id="slideDots"></div>
+<div class="hero-info">
+<h2>RÉSIDENCE</h2>
+<h1>AGHILES</h1>
+<p>AGHILES PROMOTION IMMOBILIÈRE</p>
+<p>Votre bien-être est notre priorité</p>
+<button class="call-btn"><span class="material-icons" style="vertical-align:middle;">call</span> +213 (0) 770 99 41 09</button>
 </div>
 </div>
 
 <div class="card side">
-Achetez.<br>
-Vendez.<br>
-Trouvez.<br>
-<strong>Maintenant.</strong>
+<div class="side-content">
+<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400" alt="Achetez Vendez Trouvez">
+<div class="side-text">
+<p>Achetez.</p>
+<p>Vendez.</p>
+<p>Trouvez.</p>
+<p><strong>Maintenant.</strong></p>
+<div class="ouedkniss-logo">
+<span>sur</span>
+<div style="display:flex;align-items:center;gap:8px;">
+<span style="width:24px;height:24px;background:#ffb000;border-radius:4px;display:inline-block;"></span>
+<span style="font-weight:800;">Ouedkniss</span>
+</div>
+</div>
+<button class="start-btn">Commencer maintenant →</button>
+</div>
+</div>
 </div>
 
 </section>
@@ -375,60 +474,40 @@ Une première en Algérie 🚀
 </div>
 
 <script>
-const slides = document.querySelectorAll('.slide');
+const propertyCards = document.querySelectorAll('.property-card');
+const propertyTrack = document.getElementById('propertyTrack');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
-const dotsContainer = document.getElementById('slideDots');
 let currentIndex = 0;
 let autoSlideInterval;
 
-function createDots() {
-    slides.forEach((_, index) => {
-        const dot = document.createElement('div');
-        dot.classList.add('dot');
-        if (index === 0) dot.classList.add('active');
-        dot.addEventListener('click', () => goToSlide(index));
-        dotsContainer.appendChild(dot);
+function updateSlider() {
+    propertyCards.forEach((card, index) => {
+        card.classList.toggle('active', index === currentIndex);
     });
-}
 
-function updateDots() {
-    const dots = document.querySelectorAll('.dot');
-    dots.forEach((dot, index) => {
-        dot.classList.toggle('active', index === currentIndex);
-    });
-}
-
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === index);
-    });
-    updateDots();
+    const cardWidth = 232; // 220px width + 12px gap
+    const offset = -(currentIndex * cardWidth) + (propertyCards.length > 3 ? 232 : 0);
+    propertyTrack.style.transform = `translateX(${offset}px)`;
 }
 
 function nextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length;
-    showSlide(currentIndex);
+    currentIndex = (currentIndex + 1) % propertyCards.length;
+    updateSlider();
 }
 
 function prevSlide() {
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-    showSlide(currentIndex);
-}
-
-function goToSlide(index) {
-    currentIndex = index;
-    showSlide(currentIndex);
-    resetAutoSlide();
-}
-
-function startAutoSlide() {
-    autoSlideInterval = setInterval(nextSlide, 6000);
+    currentIndex = (currentIndex - 1 + propertyCards.length) % propertyCards.length;
+    updateSlider();
 }
 
 function resetAutoSlide() {
     clearInterval(autoSlideInterval);
     startAutoSlide();
+}
+
+function startAutoSlide() {
+    autoSlideInterval = setInterval(nextSlide, 6000);
 }
 
 prevBtn.addEventListener('click', () => {
@@ -441,7 +520,15 @@ nextBtn.addEventListener('click', () => {
     resetAutoSlide();
 });
 
-createDots();
+propertyCards.forEach((card, index) => {
+    card.addEventListener('click', () => {
+        currentIndex = index;
+        updateSlider();
+        resetAutoSlide();
+    });
+});
+
+updateSlider();
 startAutoSlide();
 </script>
 </body>
