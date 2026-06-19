@@ -87,30 +87,33 @@ header{
     flex:3;
     display:flex;
     align-items:center;
-    padding:10px;
+    padding:20px;
     overflow:hidden;
 }
 
 .property-track{
     display:flex;
-    gap:12px;
-    transition:transform 0.4s ease;
+    gap:16px;
+    transition:transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .property-card{
     position:relative;
-    min-width:220px;
-    height:260px;
-    border-radius:16px;
+    min-width:240px;
+    height:280px;
+    border-radius:18px;
     overflow:hidden;
-    opacity:0.6;
-    transition:all 0.3s ease;
+    opacity:0.4;
+    transition:all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform:scale(0.9);
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
 }
 
 .property-card.active{
     opacity:1;
-    border:3px solid #1a73e8;
     transform:scale(1.05);
+    box-shadow:0 20px 40px rgba(0,0,0,0.4), 0 8px 20px rgba(0,0,0,0.2);
+    z-index:10;
 }
 
 .property-card img{
@@ -119,53 +122,35 @@ header{
     object-fit:cover;
 }
 
-.property-tag-top{
-    position:absolute;
-    top:12px;
-    left:12px;
-    background:#1a73e8;
-    color:white;
-    padding:6px 12px;
-    border-radius:12px;
-    font-size:12px;
-    font-weight:600;
-}
-
-.property-tag-bottom{
-    position:absolute;
-    bottom:12px;
-    left:12px;
-    background:rgba(0,0,0,0.7);
-    color:white;
-    padding:6px 12px;
-    border-radius:12px;
-    font-size:12px;
-    font-weight:600;
-}
-
 .nav-btn{
     position:absolute;
     top:50%;
     transform:translateY(-50%);
     background:white;
     border:none;
-    width:40px;
-    height:40px;
+    width:48px;
+    height:48px;
     border-radius:50%;
     cursor:pointer;
     display:flex;
     align-items:center;
     justify-content:center;
-    box-shadow:0 2px 8px rgba(0,0,0,0.2);
+    box-shadow:0 6px 20px rgba(0,0,0,0.3);
     z-index:20;
+    transition:all 0.2s ease;
+}
+
+.nav-btn:hover{
+    transform:translateY(-50%) scale(1.1);
+    box-shadow:0 8px 25px rgba(0,0,0,0.4);
 }
 
 .nav-left{
-    left:15px;
+    left:18px;
 }
 
 .nav-right{
-    right:15px;
+    right:18px;
 }
 
 .hero-info{
@@ -194,6 +179,32 @@ header{
     font-size:14px;
 }
 
+.switch-buttons{
+    display:flex;
+    gap:12px;
+    justify-content:flex-end;
+    margin-bottom:20px;
+}
+
+.switch-btn{
+    padding:10px 20px;
+    border-radius:25px;
+    border:2px solid rgba(255,255,255,0.3);
+    background:transparent;
+    color:white;
+    font-size:14px;
+    cursor:pointer;
+    transition:all 0.3s ease;
+}
+
+.switch-btn:hover,
+.switch-btn.active{
+    background:white;
+    color:#082f49;
+    border-color:white;
+    box-shadow:0 4px 12px rgba(0,0,0,0.2);
+}
+
 .call-btn{
     margin-top:20px;
     padding:12px 28px;
@@ -205,11 +216,13 @@ header{
     cursor:pointer;
     width:fit-content;
     align-self:flex-end;
+    transition:all 0.3s ease;
 }
 
 .call-btn:hover{
     background:white;
     color:#082f49;
+    box-shadow:0 8px 20px rgba(255,255,255,0.2);
 }
 
 .side-content{
@@ -261,23 +274,12 @@ header{
     font-size:14px;
     cursor:pointer;
     width:fit-content;
+    transition:all 0.3s ease;
 }
 
 .start-btn:hover{
     background:#1557b0;
-}
-
-.side{
-    background:
-    linear-gradient(#0007,#0007),
-    url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d");
-    background-size:cover;
-    color:white;
-    padding:35px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    font-size:26px;
+    box-shadow:0 6px 16px rgba(26,115,232,0.4);
 }
 
 .categories{
@@ -298,12 +300,13 @@ header{
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    transition:.2s;
+    transition:all 0.3s ease;
 }
 
 .category:hover{
     transform:translateY(-5px);
-    box-shadow:0 10px 25px #0002;
+    box-shadow:0 12px 28px rgba(0,0,0,0.12);
+    border-color:#1a73e8;
 }
 
 .emoji{
@@ -328,8 +331,7 @@ header{
 .ad{
     height:140px;
     border-radius:22px;
-    background:
-    linear-gradient(90deg,#071827,#101827);
+    background:linear-gradient(90deg,#071827,#101827);
     color:white;
     display:flex;
     align-items:center;
@@ -347,11 +349,9 @@ width:35%;
 }
 }
 </style>
-
 </head>
 
 <body>
-
 <header>
 <div class="logo">
 <span class="flag">🇩🇿</span>
@@ -370,49 +370,40 @@ Rechercher sur Ouedkniss <span class="material-icons">search</span>
 </div>
 </header>
 
-
 <div class="container">
-
 <section class="hero">
-
 <div class="card hero-slider">
 <div class="property-slider-container">
 <button class="nav-btn nav-left" id="prevBtn"><span class="material-icons">chevron_left</span></button>
 <div class="property-track" id="propertyTrack">
 <div class="property-card active">
-<div class="property-tag-top">Résidence AGHILES</div>
-<img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400" alt="Résidence AGHILES">
-<div class="property-tag-bottom">Résidence Hai El Biar</div>
+<img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop" alt="Résidence AGHILES">
 </div>
 <div class="property-card">
-<div class="property-tag-top">Résidence Les Bois</div>
-<img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=400" alt="Résidence Les Bois">
-<div class="property-tag-bottom">Résidence Les Bois</div>
+<img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&h=400&fit=crop" alt="Résidence Les Bois">
 </div>
 <div class="property-card">
-<div class="property-tag-top">Résidence Dely 2</div>
-<img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=400" alt="Résidence Dely 2">
-<div class="property-tag-bottom">Résidence Dely 2</div>
+<img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&h=400&fit=crop" alt="Résidence Dely 2">
 </div>
 <div class="property-card">
-<div class="property-tag-top">Villa Moderne</div>
-<img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400" alt="Villa Moderne">
-<div class="property-tag-bottom">Villa à Alger</div>
+<img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&h=400&fit=crop" alt="Villa Moderne">
 </div>
 <div class="property-card">
-<div class="property-tag-top">Appartement Luxe</div>
-<img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=400" alt="Appartement Luxe">
-<div class="property-tag-bottom">Appartement à Hydra</div>
+<img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&h=400&fit=crop" alt="Appartement Luxe">
 </div>
 </div>
 <button class="nav-btn nav-right" id="nextBtn"><span class="material-icons">chevron_right</span></button>
 </div>
 <div class="hero-info">
+<div class="switch-buttons">
+<button class="switch-btn active" id="adBtn1">Ad 1</button>
+<button class="switch-btn" id="adBtn2">Ad 2</button>
+</div>
 <h2>RÉSIDENCE</h2>
-<h1>AGHILES</h1>
-<p>AGHILES PROMOTION IMMOBILIÈRE</p>
-<p>Votre bien-être est notre priorité</p>
-<button class="call-btn"><span class="material-icons" style="vertical-align:middle;">call</span> +213 (0) 770 99 41 09</button>
+<h1 id="adTitle">AGHILES</h1>
+<p id="adDesc1">AGHILES PROMOTION IMMOBILIÈRE</p>
+<p id="adDesc2">Votre bien-être est notre priorité</p>
+<button class="call-btn"><span class="material-icons" style="vertical-align:middle;">call</span> <span id="adPhone">+213 (0) 770 99 41 09</span></button>
 </div>
 </div>
 
@@ -435,12 +426,9 @@ Rechercher sur Ouedkniss <span class="material-icons">search</span>
 </div>
 </div>
 </div>
-
 </section>
 
-
 <section class="categories">
-
 <div class="category"><span class="material-icons emoji">storefront</span>Boutiques</div>
 <div class="category"><span class="material-icons emoji">local_fire_department</span>À la une</div>
 <div class="category"><span class="material-icons emoji">house</span>Immobilier</div>
@@ -453,24 +441,18 @@ Rechercher sur Ouedkniss <span class="material-icons">search</span>
 <div class="category"><span class="material-icons emoji">health_and_safety</span>Santé</div>
 <div class="category"><span class="material-icons emoji">sports_soccer</span>Sport</div>
 <div class="category"><span class="material-icons emoji">luggage</span>Voyage</div>
-
 </section>
 
-
 <section class="features">
-
 <div class="feature"><span class="material-icons" style="font-size:36px;">sell</span><br><b>Petites annonces gratuites</b></div>
 <div class="feature"><span class="material-icons" style="font-size:36px;">people</span><br><b>Large audience</b></div>
 <div class="feature"><span class="material-icons" style="font-size:36px;">security</span><br><b>Paiement sécurisé</b></div>
 <div class="feature"><span class="material-icons" style="font-size:36px;">support_agent</span><br><b>Support client</b></div>
-
 </section>
-
 
 <div class="ad">
 Une première en Algérie 🚀
 </div>
-
 </div>
 
 <script>
@@ -478,17 +460,47 @@ const propertyCards = document.querySelectorAll('.property-card');
 const propertyTrack = document.getElementById('propertyTrack');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
+const adBtn1 = document.getElementById('adBtn1');
+const adBtn2 = document.getElementById('adBtn2');
+const adTitle = document.getElementById('adTitle');
+const adDesc1 = document.getElementById('adDesc1');
+const adDesc2 = document.getElementById('adDesc2');
+const adPhone = document.getElementById('adPhone');
 let currentIndex = 0;
 let autoSlideInterval;
+
+const adData = [
+    {
+        title: "AGHILES",
+        desc1: "AGHILES PROMOTION IMMOBILIÈRE",
+        desc2: "Votre bien-être est notre priorité",
+        phone: "+213 (0) 770 99 41 09"
+    },
+    {
+        title: "LES BOIS",
+        desc1: "RÉSIDENCE LES BOIS",
+        desc2: "Luxueuse villa avec jardin",
+        phone: "+213 (0) 555 12 34 56"
+    }
+];
+
+function updateAdInfo(index) {
+    const data = adData[index % adData.length];
+    adTitle.textContent = data.title;
+    adDesc1.textContent = data.desc1;
+    adDesc2.textContent = data.desc2;
+    adPhone.textContent = data.phone;
+}
 
 function updateSlider() {
     propertyCards.forEach((card, index) => {
         card.classList.toggle('active', index === currentIndex);
     });
 
-    const cardWidth = 232; // 220px width + 12px gap
-    const offset = -(currentIndex * cardWidth) + (propertyCards.length > 3 ? 232 : 0);
+    const cardWidth = 256; // 240px width + 16px gap
+    const offset = -(currentIndex * cardWidth) + 256;
     propertyTrack.style.transform = `translateX(${offset}px)`;
+    updateAdInfo(currentIndex);
 }
 
 function nextSlide() {
@@ -520,11 +532,34 @@ nextBtn.addEventListener('click', () => {
     resetAutoSlide();
 });
 
+adBtn1.addEventListener('click', () => {
+    adBtn1.classList.add('active');
+    adBtn2.classList.remove('active');
+    currentIndex = 0;
+    updateSlider();
+    resetAutoSlide();
+});
+
+adBtn2.addEventListener('click', () => {
+    adBtn2.classList.add('active');
+    adBtn1.classList.remove('active');
+    currentIndex = 1;
+    updateSlider();
+    resetAutoSlide();
+});
+
 propertyCards.forEach((card, index) => {
     card.addEventListener('click', () => {
         currentIndex = index;
         updateSlider();
         resetAutoSlide();
+        if (index % 2 === 0) {
+            adBtn1.classList.add('active');
+            adBtn2.classList.remove('active');
+        } else {
+            adBtn2.classList.add('active');
+            adBtn1.classList.remove('active');
+        }
     });
 });
 
