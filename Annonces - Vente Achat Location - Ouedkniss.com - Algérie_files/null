@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr" class="notranslate" translate="no">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="google" content="notranslate" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="https://cdn.ouedkniss.com/favicon.ico" />
+  <title>Annonces - Vente Achat Location - Ouedkniss.com - Algérie</title>
+  <link rel="preconnect" href="https://api.ouedkniss.com/graphql" />
+  <link rel="preconnect" href="https://cdn.ouedkniss.com" />
+  <link rel="preconnect" href="https://cdn7.ouedkniss.com" />
+  <link rel="preconnect" href="https://cdn8.ouedkniss.com" />
+  <link rel="preconnect" href="https://cdn9.ouedkniss.com" />
+  <noscript>
+    <img height="1" width="1" style="display: none"
+      src="https://www.facebook.com/tr?id=655958734553123&ev=PageView&noscript=1" />
+  </noscript>
+  <style>
+    body {
+      background: #f5f5f5;
+    }
+    .dark body {
+      background: #212121;
+    }
+
+    #loading {
+      position: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 99;
+    }
+
+    #loader {
+      display: inline-block;
+      width: 65px;
+      height: 65px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      border-top-color: #e95903;
+      animation: spin 1s ease-in-out infinite;
+      -webkit-animation: spin 1s ease-in-out infinite;
+    }
+
+    @keyframes spin {
+      to {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+
+    @-webkit-keyframes spin {
+      to {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+  </style>
+<script>
+  window.__ENV__ = {
+    GA: "G-C1R58GKDN5",
+    META: "655958734553123",
+    VERSION: "3.5.20"
+  };
+
+  (function () {
+    try {
+      if (typeof Storage === "undefined" || typeof JSON === "undefined") return;
+
+      var item = localStorage.getItem('ok-auth-frame');
+      if (!item) return;
+
+      var data = JSON.parse(item);
+      var className = document.documentElement.className;
+      var darkInClassName = className.indexOf("dark") !== -1;
+
+      if (data && data.darkMode === true && !darkInClassName) {
+        document.documentElement.className += " dark";
+      }
+    } catch (e) {}
+  })();
+</script>
+  <script src="/static/tracking.js" defer></script>
+<script defer src="https://cdn.ouedkniss.com/app/static/js/3636.8e0bf4e0698689d6.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/1242.0f6cebfcd343fd9c.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/1890.ecbbe10f8168e1c9.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/8778.7b1c728dba914ae8.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/1465.9c265aa4606b43b2.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/1786.48363fdbac672dc4.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/5273.f90d893d0308eefd.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/4205.8446230170a0a885.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/9645.319b7829f3c10b79.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/7595.aa41b9b70cdb9d40.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/1093.91ebfe53e7e7307c.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/4082.a5538621321925f4.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/5606.a56868ad63dab56f.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/4188.67c47427088e39b6.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/7545.9c49338ea88c3207.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/7288.e62a91580a610e55.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/3078.5b17fc49ca42dda4.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/2971.1991104e27c5a503.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/1575.cecc2ab532eb8d8b.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/3671.6baf5adc8bfe7d7f.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/3441.9ae2a1b0292a0e18.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/0.88975d86f7371e9d.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/5531.2d6c3e28f783dde9.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/9975.340d6604bf70fbe7.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/6124.7131f66a4d7ea758.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/8402.a1cb28640c84557c.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/8593.9d8716eb8bf5dcba.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/832.7e6b2840a69540e4.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/5946.d07e991efad69a68.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/3754.d8593cb2ba3a1988.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/3188.f40fa29065799d0b.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/index~0.2122a3b693d8af34.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/index~1.a261b4ae7cebf308.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/index~3.e07979df69bf33fa.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/index~4.716567ad39a4b081.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/index~5.2b50e225c928c708.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/index~6.6127d39936a172d3.3.5.20.m.js"></script><script defer src="https://cdn.ouedkniss.com/app/static/js/index~7.20e80a5b2fac049a.3.5.20.m.js"></script><link href="https://cdn.ouedkniss.com/app/static/css/6433.1a7580508f656723.3.5.20.m.css" rel="stylesheet"><link href="https://cdn.ouedkniss.com/app/static/css/index~2.a1ab0a3136059b7c.3.5.20.m.css" rel="stylesheet"></head>
+
+<body>
+  <noscript>
+    <strong data-nosnippet>
+      We're sorry but Ouedkniss doesn't work properly without JavaScript
+      enabled. Please enable it to continue.
+    </strong>
+  </noscript>
+  <div id="loading">
+    <div id="loader"></div>
+  </div>
+  <div id="app"></div>
+</body>
+</html>
